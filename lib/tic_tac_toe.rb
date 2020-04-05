@@ -85,6 +85,18 @@ class TicTacToe
   def full?
     @board.all? { |element| element != "" && element != " "}
   end
+  
+  def draw?
+    full? && !won?
+  end
+  
+  def over?
+    draw? || won?
+  end
+  
+  def winner
+    won? ? @board[won?[0]] : nil
+  end
 
 end
 
