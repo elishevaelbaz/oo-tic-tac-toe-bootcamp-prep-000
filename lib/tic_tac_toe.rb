@@ -81,6 +81,10 @@ class TicTacToe
     end
     return false
   end
+  
+  def full?(board)
+    board.all? { |element| element != "" && element != " "}
+  end
 
 end
 
